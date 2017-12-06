@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
-export default ()=> (
-  <View>
-    <Text>Hello Dumbways.id on functional Component</Text>
-    <Text>Another Text</Text>
-  </View>
-)
+import Header from './components/Header';
+import Body from './components/Body';
+
+export default class App extends Component{
+
+  render(){
+    const title = "Not To Do List";
+
+    return (
+      <View>
+        <Header title={title}/>
+
+        <Body/>
+      </View>
+    )
+  }
+}
